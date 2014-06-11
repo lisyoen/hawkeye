@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>매의 눈</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="lisyoen">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!--Fav and touch icons-->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="eye-icon-144.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="eye-icon-114.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="eye-icon-72.png">
+	<link rel="apple-touch-icon-precomposed" href="eye-icon-57.png">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="init.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	<script src="question.js"></script>
+	<script src="app.js"></script>
+	<script src="pageMenu.js"></script>
+	<script src="pageLength.js"></script>
+	<script src="pageLengthExam.js"></script>
+	<script src="pageLengthExam2.js"></script>
+	<style>
+/* Hide the number input */
+.full-width-slider input {
+    display: none;
+}
+.full-width-slider .ui-slider-track {
+    margin-left: 15px;
+}
+	</style>
+</head>
+<body>
+	<div id="pageMenu" data-role="page">
+		<div data-role="header" data-position="fixed" data-theme="a"> 
+			<h1>매의 눈 v1.0</h1>
+			<a id="btnOrder" href="#positionWindow" data-rel="popup" data-position-to="window" data-prefetch="true" class="ui-btn ui-mini ui-btn-right ui-btn-inline ui-btn-icon-right ui-icon-info">제작자</a>
+			<div data-role="popup" id="positionWindow" class="ui-content" data-overlay-theme="b" data-theme="b">
+				<div data-role="header">
+					<h1>제작자</h1>
+				</div>
+				<div role="main" class="ui-content">
+					<h3>이창연</h3>
+					<p><a href="http://s-core.co.kr">S-Core SDK UI Builder</a></p>
+					<a href="#" class="ui-btn ui-corner-all ui-shadow" data-rel="back">Ok</a>
+				</div>
+			</div>
+		</div><!-- /header -->
+		<div class="ui-content">
+			<div class="question-container" style="padding:0px">
+				<div class="question-text">
+					<h4 style="text-align:center;">[<span id="userName">$이름</span>]님은<br>[<span id="userTitle">$등급</span>]입니다.</h4>
+				</div>
+			</div>
+			<div id="answer" class="answer">
+				<a id="btnLength" href="#pageLength" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-carat-r"><img src="length.gif" style="height:16px;margin-right:10px;">길이 (Stage 4)</a>
+				<a id="btnArea" href="#pageArea" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-carat-r"><img src="area.gif" style="height:16px;margin-right:10px;">넓이 (Stage 2)</a>
+				<a id="btnVolume" href="#pageVolume" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-carat-r"><img src="area.gif" style="height:16px;margin-right:10px;">부피 (Stage 2)</a>
+			</div>
+			<div style="position:fixed;bottom:0px;left:0px;width:100%;height:50px;padding:0px;margin:0px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- mobile 360 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:100%"
+     data-ad-client="ca-pub-5187271410488826"
+     data-ad-slot="6284573935"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+			</div>
+		</div><!-- /content -->
+ 
+		<!--
+		<div data-role="footer" data-position="fixed">
+		</div><!-- /footer -->
+ 	</div><!-- /page -->
+
+	<div id="pageLength" data-role="page">
+		<div data-role="header" data-position="fixed" data-theme="a"> 
+			<h1>길이의 눈</h1>
+			<a id="btnOrder" href="#pageMenu" data-transition="slide" data-direction="reverse" class="ui-btn ui-mini ui-btn-left ui-btn-inline ui-btn-icon-left ui-icon-back">뒤로</a>
+		</div><!-- /header -->
+		<div class="ui-content">
+			<div id="answer" class="answer">
+				<input id="input" type="text"></input>
+				<a href="#pageLengthExam" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-carat-r"><img src="length.gif" style="height:16px;margin-right:10px;">Stage 1 (Max)</a>
+				<a href="#pageLengthExam" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-carat-r"><img src="length.gif" style="height:16px;margin-right:10px;">Stage 2 (Max)</a>
+				<a href="#pageLengthExam" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-carat-r"><img src="length.gif" style="height:16px;margin-right:10px;">Stage 3 (Max)</a>
+				<a href="#pageLengthExam" data-transition="slide" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-carat-r"><img src="length.gif" style="height:16px;margin-right:10px;">Stage 4 (3/10)</a>
+			</div>
+			<div style="position:fixed;bottom:0px;left:0px;width:100%;height:50px;padding:0px;margin:0px;">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- mobile 360 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;height:100%"
+     data-ad-client="ca-pub-5187271410488826"
+     data-ad-slot="6284573935"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+			</div>
+		</div><!-- /content -->
+ 
+		<!--
+		<div data-role="footer" data-position="fixed">
+		</div><!-- /footer -->
+ 	</div><!-- /page -->
+	
+	<div id="pageLengthExam" data-role="page">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>길이 - Level 1</h1>
+			<a id="btnOrder" href="#gotoLength" data-rel="popup" data-position-to="window" data-prefetch="true" class="ui-btn ui-mini ui-btn-left ui-btn-inline ui-btn-icon-left ui-icon-back">메뉴로</a>
+			<div data-role="popup" id="gotoLength" class="ui-content" data-overlay-theme="b" data-theme="b">
+				<div data-role="header" data-theme="a">
+					<h1>메뉴로</h1>
+				</div>
+				<div role="main" class="ui-content">
+					<h3 class="ui-title">도전을 중지하시겠습니까?</h3>
+					<p>현재 레벨까지만 기록됩니다.</p>
+					<a href="#pageLength" class="ui-btn ui-corner-all ui-shadow ui-btn-b" data-transition="fade">OK</a>
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-b" data-rel="back">Cancel</a>
+				</div>
+			</div>
+		</div><!-- /header -->
+		<div class="ui-content">
+			<div class="question-container" style="padding:0px">
+				<div id="question-text" class="question-text">
+					<h4>A의 길이는 3이다. B의 길이는?</h4>
+				</div>
+				<div id="question-image" class="question-image" style="padding:10px;background-color:rgb(200,200,200);">
+					<div class="bar-a" style="width:150px; height:auto; background-color:rgb(180,80,80); margin:5px;text-align:center;color:white;">A = 3</div>
+					<div class="bar-b" style="width:200px; height:auto; background-color:rgb(80,80,180); margin:5px;text-align:center;color:white;">B = ?</div>
+				</div>
+			</div>
+			<div id="answer" class="answer full-width-slider">
+				<input type="range" name="slider-1" id="slider-1" min="10" max="15" value="13" data-show-value="true" data-popup-enabled="true">
+				<a id="btnSubmit" href="#pageLengthExam2" data-transition="slide" class="ui-btn">제출</a>
+			</div>
+		</div><!-- /content -->
+ 
+		<!--
+		<div data-role="footer" data-position="fixed">
+		</div><!-- /footer -->
+ 
+	</div><!-- /page -->
+	<div id="pageLengthExam2" data-role="page">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>길이 - Level 1</h1>
+			<a id="btnOrder" href="#gotoLength2" data-rel="popup" data-position-to="window" data-prefetch="true" class="ui-btn ui-mini ui-btn-left ui-btn-inline ui-btn-icon-left ui-icon-back">메뉴로</a>
+			<div data-role="popup" id="gotoLength2" class="ui-content" data-overlay-theme="b" data-theme="b">
+				<div data-role="header" data-theme="a">
+					<h1>메뉴로</h1>
+				</div>
+				<div role="main" class="ui-content">
+					<h3 class="ui-title">도전을 중지하시겠습니까?</h3>
+					<p>현재 레벨까지만 기록됩니다.</p>
+					<a href="#pageLength" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-transition="fade">OK</a>
+					<a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Cancel</a>
+				</div>
+			</div>
+		</div><!-- /header -->
+		<div class="ui-content">
+			<div class="question-container" style="padding:0px">
+				<div id="question-text2" class="question-text">
+					<h4>A의 길이는 3이다. B의 길이는?</h4>
+				</div>
+				<div id="question-image" class="question-image" style="padding:10px;background-color:rgb(200,200,200);">
+					<div class="bar-a" style="width:150px; height:auto; background-color:rgb(180,80,80); margin:5px;text-align:center;color:white;">A = 3</div>
+					<div class="bar-b" style="width:200px; height:auto; background-color:rgb(80,80,180); margin:5px;text-align:center;color:white;">B = ?</div>
+				</div>
+			</div>
+			<div id="answer" class="answer full-width-slider">
+				<input type="range" name="slider-1" id="slider-1" min="10" max="15" value="13" data-show-value="true" data-popup-enabled="true">
+				<a id="btnSubmit" href="#pageLengthExam" data-transition="slide" class="ui-btn">제출</a>
+			</div>
+		</div><!-- /content -->
+ 
+		<!--
+		<div data-role="footer" data-position="fixed">
+		</div><!-- /footer -->
+ 
+	</div><!-- /page -->
+</body>
+</html>
